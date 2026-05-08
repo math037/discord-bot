@@ -1,8 +1,5 @@
 const { Client, GatewayIntentBits } = require('discord.js');
-// GatewayIntentBits.MessageContent requires "Message Content Intent" to be explicitly
-// enabled in the Discord Developer Portal (Bot → Privileged Gateway Intents).
-// Add it back to the array below once that toggle is saved in the portal.
-const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
+const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
 client.on('ready', async () => {
   console.log(`Bot connecté en tant que ${client.user.tag}`);
