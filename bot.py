@@ -1,4 +1,3 @@
-import discord_patch  # Must be before discord import
 import os
 import discord
 
