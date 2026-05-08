@@ -1,4 +1,2 @@
 [build]
 nixpkgs = ["libsndfile1", "python312Full"]
-
-[deploy]
