@@ -1,6 +1,5 @@
 [build]
-nixpkgs = ["libsndfile1"]
-python = "python313Full"
+nixpkgs = ["libsndfile1", "python3Full"]
 
 [deploy]
 preDeployCommand = "rm -rf /app/.venv"
