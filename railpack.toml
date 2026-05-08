@@ -1,5 +1,4 @@
 [build]
-nixpkgs = ["libsndfile1", "python3Full"]
+nixpkgs = ["libsndfile1", "python312Full"]
 
 [deploy]
-preDeployCommand = "python patch_discord.py"
