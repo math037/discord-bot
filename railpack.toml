@@ -2,4 +2,4 @@
 nixpkgs = ["libsndfile1", "python3Full"]
 
 [deploy]
-preDeployCommand = "rm -rf /app/.venv"
+preDeployCommand = "python patch_discord.py"
