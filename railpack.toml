@@ -1,2 +1,3 @@
 [build]
 nixpkgs = ["libsndfile1"]
+python = "python313Full"
