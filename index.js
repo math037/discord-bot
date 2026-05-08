@@ -4,7 +4,13 @@ const { Client, GatewayIntentBits } = require('discord.js');
 // Add it back to the array below once that toggle is saved in the portal.
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages] });
 
-client.on('ready', () => console.log(`Bot connecté en tant que ${client.user.tag}`));
+client.on('ready', async () => {
+  console.log(`Bot connecté en tant que ${client.user.tag}`);
+  const channel = client.channels.cache.get('1502015834674036856');
+  if (channel) {
+    await channel.send('Starting Container');
+  }
+});
 
 client.on('messageCreate', (message) => {
   if (message.content === 'ping') message.reply('pong');
