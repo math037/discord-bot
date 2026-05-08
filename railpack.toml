@@ -1,3 +1,6 @@
 [build]
 nixpkgs = ["libsndfile1"]
 python = "python313Full"
+
+[deploy]
+preDeployCommand = "rm -rf /app/.venv"
